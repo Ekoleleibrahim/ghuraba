@@ -1,0 +1,315 @@
+*{
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+body{
+    background-color: #f1f1f1;
+}
+h1,h2,h3,h4,h5,h6{
+    color: rgb(3, 3, 44);
+    font-family: "Merriweather", 'Times New Roman', Times, serif;
+    font-weight: 400;
+}
+h1::first-letter{
+    font-size: 50px;
+}
+h2{
+    margin-bottom: 20px;
+    font-size: 50px;
+    line-height: 1.1;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    text-align: center;
+    font-weight: 500;
+}
+img{
+    width: 100%;
+    object-fit: cover;
+}
+span.point{
+    color: rgb(14, 14, 109);;
+}
+/* 
+    Entete du site
+*/
+header{
+    background-color: #fff;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    box-shadow: 2px 0 1px #000;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+}
+header nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+header #nav-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+   
+}
+header #nav-bar button{
+    border: none;
+    background-color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+}
+header #nav-bar a,
+header #nav-bar button{
+    display: inline-block;
+    color: rgb(3, 3, 44);
+    padding: 25px 30px;
+    border-bottom: 3px solid #fff;
+}
+header #nav-bar a:hover,
+header #nav-bar button:hover{
+    border-bottom: 3px solid rgb(3, 3, 44);
+}
+header #nav-bar a:hover{
+    color: rgb(23, 23, 109);
+}
+header .content-sousnav{
+    width: 100%;
+    padding: 20px;
+    position: absolute;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    display: none;
+}
+header #nav-bar #over-content-sousnav:hover .content-sousnav{
+    display: flex;
+    justify-content: space-evenly;
+}
+header #nav-bar .content-sousnav a{
+    display: block;
+    padding: 10px;
+}
+header #nav-bar .content-sousnav a:hover{
+    background-color: rgb(13, 13, 63);
+    color: white;
+}
+header .reserver,#section-accueil .reserver{
+    background-color: rgb(13, 13, 63);
+    color: #fff;
+    padding: 10px 20px;
+    font-weight: 300;
+    border-radius: 5px;
+}
+header .reserver:hover,#section-accueil .reserver:hover{
+    background-color: rgb(23, 23, 109);
+}
+
+/* 
+    Section accueil
+*/
+#section-accueil{
+    height: auto;
+    padding: 100px 50px;
+    background-image: url(images/fond.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+}
+#section-accueil div.div-principal{
+    width: 60%;
+    line-height: 1.6;
+}
+#section-accueil .buttons-sectionaccueil{
+    margin-top: 30px;
+}
+#section-accueil .reserver,#section-accueil .contact{
+    padding: 15px;
+    text-transform: capitalize;
+    border-radius: 3px;
+}
+#section-accueil .contact{
+    border: 2px solid rgb(13, 13, 63);
+    color: rgb(13, 13, 63);
+    margin-left: 20px;
+    padding: 13px;
+}
+#section-accueil .contact:hover{
+    background-color: rgb(23, 23, 109);
+    border:2px solid rgb(41, 41, 156);
+    color: white;
+}
+
+/* 
+    Section examen de controle
+*/
+#section-examen-controle{
+    padding: 100px 0;
+    background-color: #fff;
+}
+div.container-principal-examens{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    justify-content: center;
+    gap: 20px;
+    
+}
+#section-examen-controle div.examen-controle-fond{
+    background-image: url(images/doctor.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.container-examens-header h3{
+    margin-bottom: 20px;
+    font-size: 1.875em;
+}
+#conteneur-examens
+{
+    margin-top: 20px;
+}
+#conteneur-examens h4{
+    margin-bottom: 20px;
+    font-size: 1.25em;
+}
+.grille-examens{
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: flex-start;
+    gap: 10px;
+}
+.grille-examens div{
+    line-height: 1.5;
+}
+
+/* Lorsque l'écran fait 1080px ou moins, ce style est appliqué: */
+@media (max-width: 1080px) {
+    /* 
+        Entete du site
+    */
+    header{
+        display: block;
+    }
+    header nav{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 30px;
+    }
+    header .content-sousnav{
+        width: 100%;
+        position: absolute;
+        top: 133px;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        display: none;
+    }
+
+    /* 
+         Section accueil
+    */
+    #section-accueil{
+        height: auto;
+        padding: 60px 50px;
+        background-image: url(images/fond.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    
+}
+
+/* Lorsque l'écran fait 1000px ou moins, ce style est appliqué: */
+@media (max-width: 1000px) {
+    /* 
+        Section accueil
+    */
+    #section-accueil div.div-principal{
+        width: 70%;
+        line-height: 1.6;
+    }
+}
+
+/* Lorsque l'écran fait 932px ou moins, ce style est appliqué: */
+@media (max-width: 932px) {
+    /* 
+        Section examen de controle
+    */
+    #section-examen-controle{
+        padding: 100px 30px;
+        background-color: #fff;
+    }
+    div.container-principal-examens{
+        width: auto;
+        margin: auto;
+        display: block;
+        grid-template-columns: 100%;
+        gap: 0;
+        text-align: justify;
+        
+    }
+    #section-examen-controle div.examen-controle-fond{
+        width: 100%;
+        padding: 100px;
+        background-image: url(images/doctor.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .container-examens-header{
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+/* Lorsque l'écran fait 875px ou moins, ce style est appliqué: */
+@media (max-width: 875px) {
+    /* 
+        Section accueil
+    */
+    #section-accueil{
+        height: auto;
+        padding: 60px 30px;
+        background-image: url(images/fond.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    #section-accueil div.div-principal{
+        width: 100%;
+        line-height: 1.6;
+    }
+    #section-accueil div.div-principal p{
+        color: rgb(19, 19, 61);
+    }
+}
+
+/* Lorsque l'écran fait 600px ou moins, ce style est appliqué: */
+@media (max-width: 600px) {
+    /* 
+        Section examen de controle
+    */
+    .grille-examens{
+        margin-top: 10px;
+        display: grid;
+        grid-template-columns: 100%;
+    }
+}
