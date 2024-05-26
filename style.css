@@ -21,6 +21,14 @@ h2{
     font-size: 50px;
     line-height: 1.1;
 }
+h3{
+    margin-bottom: 20px;
+    font-size: 1.875em;
+}
+h4{
+    margin-bottom: 20px;
+    font-size: 1.25em;
+}
 ul{
     list-style: none;
 }
@@ -35,6 +43,16 @@ img{
 }
 span.point{
     color: rgb(14, 14, 109);;
+}
+.rouge-bordeau{
+    color: #ed651d;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+}
+#section-pratique-medical{
+    padding: 100px 50px;
 }
 /* 
     Entete du site
@@ -107,14 +125,16 @@ header #nav-bar .content-sousnav a:hover{
     background-color: rgb(13, 13, 63);
     color: white;
 }
-header .reserver,#section-accueil .reserver{
+header .reserver,
+#section-accueil .reserver{
     background-color: rgb(13, 13, 63);
     color: #fff;
     padding: 10px 20px;
     font-weight: 300;
     border-radius: 5px;
 }
-header .reserver:hover,#section-accueil .reserver:hover{
+header .reserver:hover,
+#section-accueil .reserver:hover{
     background-color: rgb(23, 23, 109);
 }
 
@@ -137,7 +157,8 @@ header .reserver:hover,#section-accueil .reserver:hover{
 #section-accueil .buttons-sectionaccueil{
     margin-top: 30px;
 }
-#section-accueil .reserver,#section-accueil .contact{
+#section-accueil .reserver,
+#section-accueil .contact{
     padding: 15px;
     text-transform: capitalize;
     border-radius: 3px;
@@ -176,17 +197,9 @@ div.container-principal-examens{
     background-size: cover;
     background-position: center;
 }
-.container-examens-header h3{
-    margin-bottom: 20px;
-    font-size: 1.875em;
-}
 #conteneur-examens
 {
     margin-top: 20px;
-}
-#conteneur-examens h4{
-    margin-bottom: 20px;
-    font-size: 1.25em;
 }
 .grille-examens{
     margin-top: 10px;
@@ -198,6 +211,122 @@ div.container-principal-examens{
 .grille-examens div{
     line-height: 1.5;
 }
+
+/* Section pratique médical */
+.pratique-medical-header{
+    text-align: center;
+    margin-bottom: 30px;
+}
+div.grille-pratique-medical{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+}
+div.grille-pratique-medical article{
+    background-color: #fff;
+    padding: 30px 20px;
+    line-height: 1.8;
+    text-align: justify;
+    box-shadow: 2px 4px 30px -11px rgba(20, 20, 91,0.4);
+    -webkit-box-shadow: 2px 4px 30px -11px rgba(20, 20, 91,0.4);
+    -moz-box-shadow: 2px 4px 30px -11px rgba(20, 20, 91,0.4);
+    border-radius: 5px;
+}
+.div-en-savoir-plus{
+    margin-top: 10px;
+}
+.div-en-savoir-plus .en-savoir-plus:link,
+.div-en-savoir-plus .en-savoir-plus:active{
+    text-decoration: none;
+    color: rgb(20, 20, 91);
+}
+.div-en-savoir-plus .en-savoir-plus:visited{
+    color: rebeccapurple;
+}
+.div-en-savoir-plus .en-savoir-plus:hover{
+    text-decoration: underline;
+}
+.container-buttons-suivant{
+    margin-top: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.container-buttons-suivant a{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 20px 10px;
+    border-radius: 50%;
+    border: 2px solid rgb(13, 13, 63);
+    color: rgb(13, 13, 63);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-buttons-suivant a:hover{
+    background-color: rgb(13, 13, 63);
+    color: #fff;
+}
+
+/* 
+    Section communauté médical
+*/
+#section-communaute{
+    margin: 40px 0;
+}
+#section-communaute h3,
+#section-communaute p{
+    color: #fff;
+}
+.container-grid-communaute{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    justify-content: center;
+    background-color: rgb(13, 13, 63);
+}
+.container-image-communaute{
+    background-image: url(images/team.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.container-contenu-communaute{
+    line-height: 1.5;
+    padding: 60px 30px;
+}
+.container-contenu-communaute .rouge-bordeau{
+    text-align: left;
+}
+#section-communaute .buttons-section-communaute{
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+.buttons-section-communaute .reserver,
+.buttons-section-communaute .contact{
+    padding: 15px;
+    border-radius: 3px;
+}
+.buttons-section-communaute .reserver{
+    background-color: #fff;
+    color: rgb(13, 13, 63);
+}
+.buttons-section-communaute .reserver:hover{
+    background-color: rgb(23, 23, 109);
+    color: #fff;
+}
+.buttons-section-communaute .contact{
+    border: 2px solid #fff;
+    color: #fff;
+}
+.buttons-section-communaute .contact:hover{
+    background-color: #fff;
+    color: rgb(13, 13, 63);
+}
+
 
 /* Lorsque l'écran fait 1080px ou moins, ce style est appliqué: */
 @media (max-width: 1080px) {
@@ -245,6 +374,19 @@ div.container-principal-examens{
     #section-accueil div.div-principal{
         width: 70%;
         line-height: 1.6;
+    }
+}
+
+/* Lorsque l'écran fait 950px ou moins, ce style est appliqué: */
+@media (max-width: 950px) {
+    /* Section pratique médical */
+    #section-pratique-medical{
+        padding: 100px 30px;
+    }
+    div.grille-pratique-medical{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
     }
 }
 
@@ -300,6 +442,28 @@ div.container-principal-examens{
     #section-accueil div.div-principal p{
         color: rgb(19, 19, 61);
     }
+    /* 
+        Section header
+    */
+    header nav{
+        display: none;
+    }
+}
+
+/* Lorsque l'écran fait 755px ou moins, ce style est appliqué: */
+@media (max-width: 755px) {
+    /* 
+        Section communauté médical
+    */
+    .container-grid-communaute{
+        display: grid;
+        grid-template-columns: 100%;
+        justify-content: center;
+        background-color: rgb(13, 13, 63);
+    }
+    .container-image-communaute{
+        padding: 200px;
+    }
 }
 
 /* Lorsque l'écran fait 600px ou moins, ce style est appliqué: */
@@ -311,5 +475,70 @@ div.container-principal-examens{
         margin-top: 10px;
         display: grid;
         grid-template-columns: 100%;
+    }
+}
+
+/* Lorsque l'écran fait 650px ou moins, ce style est appliqué: */
+@media (max-width: 650px) {
+    /* Section pratique médical */
+    #section-pratique-medical{
+        padding: 100px 30px;
+    }
+    div.grille-pratique-medical{
+        display: grid;
+        grid-template-columns: 100%;
+        gap: 30px;
+    }
+}
+
+/* Lorsque l'écran fait 635px ou moins, ce style est appliqué: */
+@media (max-width: 635px) {
+    /* 
+        Section accueil
+    */
+    #section-accueil{
+        height: auto;
+        padding: 70px 20px;
+        background-image: url(images/fond.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    #section-accueil div.div-principal{
+        width: 100%;
+        line-height: 1.6;
+        text-align: center;
+    }
+}
+
+/* Lorsque l'écran fait 460px ou moins, ce style est appliqué: */
+@media (max-width: 460px) {
+    /* 
+        Section communauté médicale
+    */
+    #section-communaute .buttons-section-communaute{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+/* Lorsque l'écran fait 444px ou moins, ce style est appliqué: */
+@media (max-width: 444px) {
+    /* 
+        Section accueil
+    */
+    div.buttons-sectionaccueil{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    #section-accueil .contact{
+        border: 2px solid rgb(13, 13, 63);
+        color: rgb(13, 13, 63);
+        margin-left: 0;
+        padding: 13px;
     }
 }
