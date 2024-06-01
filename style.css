@@ -7,6 +7,30 @@
 }
 body{
     background-color: #f1f1f1;
+    position: relative;
+}
+aside{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+    position: fixed;
+    top: 40%;
+    right: 0;
+    z-index: 10;
+    background-color: rgb(3, 3, 44);
+    padding: 10px;
+    border-radius: 8px;
+}
+aside a{
+    display: inline-block;
+    color: #fff;
+    transition: transform 400ms;
+}
+aside a:hover{
+    transform: scale(1.2);
 }
 h1,h2,h3,h4,h5,h6{
     color: rgb(3, 3, 44);
@@ -162,6 +186,7 @@ header .reserver:hover,
     padding: 15px;
     text-transform: capitalize;
     border-radius: 3px;
+    width: 100%;
 }
 #section-accueil .contact{
     border: 2px solid rgb(13, 13, 63);
@@ -247,7 +272,7 @@ div.grille-pratique-medical article{
     text-decoration: underline;
 }
 .container-buttons-suivant{
-    margin-top: 50px;
+    margin-top: 30px;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -256,15 +281,11 @@ div.grille-pratique-medical article{
 }
 .container-buttons-suivant a{
     display: inline-block;
-    width: 50px;
-    height: 50px;
-    padding: 20px 10px;
-    border-radius: 50%;
+    width: 150px;
+    padding: 10px;
     border: 2px solid rgb(13, 13, 63);
     color: rgb(13, 13, 63);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
 }
 .container-buttons-suivant a:hover{
     background-color: rgb(13, 13, 63);
@@ -326,8 +347,6 @@ div.grille-pratique-medical article{
     background-color: #fff;
     color: rgb(13, 13, 63);
 }
-
-
 /* Lorsque l'écran fait 1080px ou moins, ce style est appliqué: */
 @media (max-width: 1080px) {
     /* 
@@ -387,6 +406,37 @@ div.grille-pratique-medical article{
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 30px;
+    }
+
+    /* Aside */
+    aside{
+        height: auto;
+        width: 50px;
+        /* margin: auto; */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 20px;
+        position: fixed;
+        top: auto;
+        bottom: 0;
+        right: 0;
+        /* right: 0; */
+        overflow: hidden;
+        z-index: 10;
+        background-color: #fff;
+        border: 3px solid rgb(13, 13, 63);
+        padding: 10px;
+        border-radius: 2px;
+        transition: width 800ms;
+        transition-timing-function:cubic-bezier(0.215, 0.610, 0.355, 1);
+    }
+    aside:hover{
+        width: 80%;
+    }
+    aside a{
+        color: rgb(13, 13, 63);
     }
 }
 
@@ -462,7 +512,8 @@ div.grille-pratique-medical article{
         background-color: rgb(13, 13, 63);
     }
     .container-image-communaute{
-        padding: 200px;
+        width: auto;
+        padding: 100px;
     }
 }
 
