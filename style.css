@@ -37,6 +37,9 @@ h1,h2,h3,h4,h5,h6{
     font-family: "Merriweather", 'Times New Roman', Times, serif;
     font-weight: 400;
 }
+h4{
+    font-weight: 700;
+}
 h1::first-letter{
     font-size: 50px;
 }
@@ -75,8 +78,14 @@ span.point{
     font-weight: 500;
     text-align: center;
 }
-#section-pratique-medical{
+.fa-kit-medical{
+    margin-right: 5px;
+}
+#section-pratique-medical,section#choisissez-nous{
     padding: 100px 50px;
+}
+section{
+    line-height: 1.4;
 }
 /* 
     Entete du site
@@ -347,6 +356,27 @@ div.grille-pratique-medical article{
     background-color: #fff;
     color: rgb(13, 13, 63);
 }
+
+/* Section choisissez-nous */
+section#choisissez-nous{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    align-items: center;
+    gap: 50px;
+    background-color: #fff;
+}
+.rouge-bordeau-choix{
+    text-align: left;
+}
+.element2{
+    padding: 20px;
+    line-height: 1.5;
+    border-radius: 5px;
+}
+.element2 li{
+    margin-bottom: 10px;
+}
+
 /* Lorsque l'écran fait 1080px ou moins, ce style est appliqué: */
 @media (max-width: 1080px) {
     /* 
@@ -499,6 +529,17 @@ div.grille-pratique-medical article{
         display: none;
     }
 }
+
+/* Lorsque l'écran fait 772px ou moins, ce style est appliqué: */
+@media (max-width: 772px) {
+    section#choisissez-nous{
+        display: grid;
+        grid-template-columns: 100%;
+        gap: 0;
+        padding: 50px 20px;
+    }
+}
+
 
 /* Lorsque l'écran fait 755px ou moins, ce style est appliqué: */
 @media (max-width: 755px) {
