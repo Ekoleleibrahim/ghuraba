@@ -37,9 +37,6 @@ h1,h2,h3,h4,h5,h6{
     font-family: "Merriweather", 'Times New Roman', Times, serif;
     font-weight: 400;
 }
-h4{
-    font-weight: 700;
-}
 h1::first-letter{
     font-size: 50px;
 }
@@ -55,6 +52,7 @@ h3{
 h4{
     margin-bottom: 20px;
     font-size: 1.25em;
+    font-weight: 700;
 }
 ul{
     list-style: none;
@@ -81,16 +79,23 @@ span.point{
 .fa-kit-medical{
     margin-right: 5px;
 }
-#section-pratique-medical,section#choisissez-nous{
+#section-pratique-medical,
+section#choisissez-nous,
+section#tarification{
     padding: 100px 50px;
 }
 section{
     line-height: 1.4;
 }
+.pratique-medical-header,
+.header-tarification{
+    text-align: center;
+    margin-bottom: 30px;
+}
 /* 
     Entete du site
 */
-header{
+header#header-principal{
     background-color: #fff;
     padding: 0 20px;
     display: grid;
@@ -247,10 +252,6 @@ div.container-principal-examens{
 }
 
 /* Section pratique médical */
-.pratique-medical-header{
-    text-align: center;
-    margin-bottom: 30px;
-}
 div.grille-pratique-medical{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -372,6 +373,53 @@ section#choisissez-nous{
 }
 .element2 li{
     margin-bottom: 10px;
+}
+
+/* Section tarification */
+div.grille-tarification{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.grille-tarification article{
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 8px #cecece;
+    width: 250px;
+}
+.grille-tarification article header{
+    text-align: center;
+}
+.grille-tarification article h4{
+    margin-bottom: 5px;
+}
+.grille-tarification article div.content,
+.grille-tarification article div.btn-tarification{
+    margin-top: 30px;
+}
+.content .montant{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.content .montant span{
+    font-size: 30px;
+    font-weight: 700;
+    color: rgb(13, 13, 63);
+}
+.grille-tarification article div.btn-tarification{
+    text-align: center;
+}
+div.btn-tarification .reserver{
+    display: block;
+    padding: 10px 20px;
+    background-color: rgb(13, 13, 63);
+    color: #fff;
+    border-radius: 2px;
+    text-align: center;
+}
+div.btn-tarification .reserver:hover{
+    background-color: rgb(23, 23, 109);
 }
 
 /* Lorsque l'écran fait 1080px ou moins, ce style est appliqué: */
@@ -596,6 +644,25 @@ section#choisissez-nous{
     #section-accueil div.div-principal{
         width: 100%;
         line-height: 1.6;
+        text-align: center;
+    }
+
+    /* Section tarification */
+    #section-tarification{
+        padding: 100px 20px;
+    }
+    div.grille-tarification{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+    .grille-tarification article{
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 0 8px #cecece;
+        width: 300px;
         text-align: center;
     }
 }
