@@ -81,14 +81,16 @@ span.point{
 }
 #section-pratique-medical,
 section#choisissez-nous,
-section#tarification{
+section#tarification,
+section#container-form{
     padding: 100px 50px;
 }
 section{
     line-height: 1.4;
 }
 .pratique-medical-header,
-.header-tarification{
+.header-tarification,
+.header-form{
     text-align: center;
     margin-bottom: 30px;
 }
@@ -388,6 +390,9 @@ div.grille-tarification{
     box-shadow: 0 0 8px #cecece;
     width: 250px;
 }
+.grille-tarification article:hover{
+    border: 2px solid rgb(23, 23, 109);
+}
 .grille-tarification article header{
     text-align: center;
 }
@@ -420,6 +425,60 @@ div.btn-tarification .reserver{
 }
 div.btn-tarification .reserver:hover{
     background-color: rgb(23, 23, 109);
+}
+
+/* Formulaire de contact */
+label{
+    display: block;
+}
+span.label-form{
+    display: block;
+    margin-bottom: 5px;
+    padding-left: 5px;
+}
+sup{
+    color: rgb(52, 52, 185);
+}
+#container-form form{
+    width: 650px;
+    margin: auto;
+}
+input,
+textarea{
+    width: 100%;
+    padding: 10px 16px;
+    display: inline-block;
+    margin-bottom: 15px;
+    border-radius: 3px;
+    outline: none;
+    border: 2px solid #bbb;
+    font-size: 17px;
+}
+textarea{
+    margin-bottom: 0;
+}
+input:focus,
+textarea:focus{
+    border: 2px solid rgb(41, 41, 168);
+}
+input::placeholder,
+textarea::placeholder{
+    color: rgba(18, 18, 127, 0.633);
+}
+textarea{
+    resize: none;
+    height: 200px;
+}
+button{
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: rgb(13, 13, 63);
+    padding: 10px 16px;
+    color: white;
+}
+button:hover{
+    background-color: rgb(30, 30, 103);
 }
 
 /* Lorsque l'écran fait 1080px ou moins, ce style est appliqué: */
@@ -612,6 +671,9 @@ div.btn-tarification .reserver:hover{
         margin-top: 10px;
         display: grid;
         grid-template-columns: 100%;
+    }
+    #container-form{
+        padding: 50px 20px;
     }
 }
 

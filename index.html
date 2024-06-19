@@ -60,7 +60,7 @@
                     </ul>
                 </li>
                 <li><a href="#section-pratique-medical">A propos</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="#container-form">Contact</a></li>
                 <li><a href="">Blog</a></li>
             </ul>
             <div>
@@ -293,7 +293,7 @@
                     </a>
                 </div>
             </article>
-            <article>
+            <article class="blue">
                 <header>
                     <h4>Entreprise professionnelles</h4>
                     <p>Lorem ipsum dolor sit amet.</p>
@@ -336,6 +336,44 @@
                 </div>
             </article>
         </div>
+    </section>
+
+    <!-- 
+        Formulaire de contact
+    -->
+    <section id="container-form">
+        <div class="header-form">
+            <h3>Contactez-nous</h3>
+            <p>Merci de nous laisser vos questions, commentaires ou suggestions en complétant ce formulaire.</p>
+        </div>
+        <form>
+            <label for="identite">
+                <span class="label-form">Identité complète <sup>*</sup></span>
+                <p>
+                    <input type="text" id="identite" placeholder="votre nom complet" required>
+                </p>
+            </label>
+            <label for="email">
+                <span class="label-form">Email <sup>*</sup></span>
+                <input type="email" id="email" placeholder="example123@gmail.com" required>
+            </label>
+            <label for="Tel">
+                <span class="label-form">Téléphone <sup>*</sup></span>
+                <input type="tel" id="tel" placeholder="00243834565822" required>
+            </label>
+            <label for="sujet">
+                <span class="label-form">Intitulé <sup>*</sup></span>
+                <input type="text" id="sujet" placeholder="intitulé" required>
+            </label>
+            <label for="message">
+                <span class="label-form">Message <sup>*</sup></span>
+                <textarea id="message" placeholder="ecrivez votre message ici ..." required></textarea>
+            </label>
+            <p style="margin-bottom: 5px; color: rgb(231, 36, 36);">Les champs avec (*) indique qu'il est obligatoire, veillez le remplir.</p>
+            <div>
+                <button type="submit">Envoyer</button>
+            </div>
+        </form>
     </section>
 </body>
 </html>
