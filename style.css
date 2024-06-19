@@ -101,7 +101,7 @@ header#header-principal{
     background-color: #fff;
     padding: 0 20px;
     display: grid;
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 30% 60%;
     justify-content: space-between;
     align-items: center;
     position: relative;
@@ -481,6 +481,26 @@ button:hover{
     background-color: rgb(30, 30, 103);
 }
 
+/* Footer du site */
+footer{
+    padding: 30px;
+    text-align: center;
+    background-color: rgb(13, 13, 63);
+    color: white;
+}
+footer .container-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+.container-footer a{
+    color: white;
+}
+.container-footer a i{
+    border-radius: 50%;
+}
 /* Lorsque l'écran fait 1080px ou moins, ce style est appliqué: */
 @media (max-width: 1080px) {
     /* 
@@ -626,12 +646,6 @@ button:hover{
     #section-accueil div.div-principal p{
         color: rgb(19, 19, 61);
     }
-    /* 
-        Section header
-    */
-    header nav{
-        display: none;
-    }
 }
 
 /* Lorsque l'écran fait 772px ou moins, ce style est appliqué: */
@@ -659,21 +673,6 @@ button:hover{
     .container-image-communaute{
         width: auto;
         padding: 100px;
-    }
-}
-
-/* Lorsque l'écran fait 600px ou moins, ce style est appliqué: */
-@media (max-width: 600px) {
-    /* 
-        Section examen de controle
-    */
-    .grille-examens{
-        margin-top: 10px;
-        display: grid;
-        grid-template-columns: 100%;
-    }
-    #container-form{
-        padding: 50px 20px;
     }
 }
 
@@ -726,6 +725,25 @@ button:hover{
         box-shadow: 0 0 8px #cecece;
         width: 300px;
         text-align: center;
+    }
+}
+
+/* Lorsque l'écran fait 600px ou moins, ce style est appliqué: */
+@media (max-width: 600px) {
+    /* 
+        Section examen de controle
+    */
+    .grille-examens{
+        margin-top: 10px;
+        display: grid;
+        grid-template-columns: 100%;
+    }
+    section#container-form{
+        padding: 30px 20px;
+    }
+    section#container-form form{
+        width: 100%;
+        margin: 0;
     }
 }
 
