@@ -101,7 +101,7 @@ header#header-principal{
     background-color: #fff;
     padding: 0 20px;
     display: grid;
-    grid-template-columns: 30% 60%;
+    grid-template-columns: 30% 65% 5%;
     justify-content: space-between;
     align-items: center;
     position: relative;
@@ -178,6 +178,54 @@ header .reserver:hover,
     background-color: rgb(23, 23, 109);
 }
 
+.container-burger{
+    display: none;
+}
+#burger{
+    display: none;
+}
+#burger-logo{
+    background-color: rgb(13, 13, 58);
+    color: white;
+    display: block;
+    padding: 10px;
+    text-align: center;
+}
+#burger-logo div .reserver-burger{
+    display: inline-block;
+    margin: 20px 0;
+    background-color: transparent;
+    border: 1px solid white;
+}
+#burger-logo div .reserver-burger:hover{
+    background-color: white;
+    color: black;
+}
+#burger-logo span{
+    display: inline-block;
+    rotate: 90deg;
+}
+.container-burger ul{
+    background-color: rgb(1, 1, 20);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    bottom: -276px;
+    width: 100%;
+    display: none;
+}
+.container-burger ul a{
+    display: block;
+    color: white;
+    padding: 10px 16px;
+}
+.container-burger ul a:hover{
+    background-color: white;
+    color: black;
+}
 /* 
     Section accueil
 */
@@ -501,14 +549,34 @@ footer .container-footer{
 .container-footer a i{
     border-radius: 50%;
 }
+
+/* Lorsque l'écran fait 1112px ou moins, ce style est appliqué: */
+@media  (max-width: 1112px) {
+    /* Entete site */
+    #header-principal nav{
+        display: none;
+    }
+    .container-burger{
+        display: block;
+    }
+    header#header-principal{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #burger:checked ~ #burger-logo ul{
+        display: block;
+    }
+    #burger:checked ~ span{
+        border: 2px solid white;
+    }
+}
+
 /* Lorsque l'écran fait 1080px ou moins, ce style est appliqué: */
 @media (max-width: 1080px) {
     /* 
         Entete du site
     */
-    header{
-        display: block;
-    }
     header nav{
         display: flex;
         justify-content: flex-end;
@@ -536,10 +604,7 @@ footer .container-footer{
         background-size: cover;
         background-position: center;
     }
-     /* Hedear */
-     #header-principal nav{
-        display: none;
-    }
+    
 }
 
 /* Lorsque l'écran fait 1000px ou moins, ce style est appliqué: */
@@ -565,11 +630,10 @@ footer .container-footer{
         gap: 30px;
     }
 
-    /* Aside */
+    /* Aside 
     aside{
         height: auto;
         width: 50px;
-        /* margin: auto; */
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
@@ -579,7 +643,6 @@ footer .container-footer{
         top: auto;
         bottom: 0;
         right: 0;
-        /* right: 0; */
         overflow: hidden;
         z-index: 10;
         background-color: #fff;
@@ -595,6 +658,7 @@ footer .container-footer{
     aside a{
         color: rgb(13, 13, 63);
     }
+    */
 }
 
 /* Lorsque l'écran fait 932px ou moins, ce style est appliqué: */
