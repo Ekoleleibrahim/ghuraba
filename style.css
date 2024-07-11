@@ -109,6 +109,7 @@ header#header-principal{
     position: sticky;
     position: -webkit-sticky;
     top: 0;
+    z-index: 1000;
 }
 header nav{
     display: flex;
@@ -188,7 +189,7 @@ header .reserver:hover,
     background-color: rgb(13, 13, 58);
     color: white;
     display: block;
-    padding: 10px;
+    padding: 10px 16px;
     text-align: center;
 }
 #burger-logo div .reserver-burger{
@@ -214,8 +215,10 @@ header .reserver:hover,
     position: absolute;
     left: 0;
     bottom: -276px;
+    transform: translateX(-1000px);
+    transition: 0.7s ease-in-out;
     width: 100%;
-    display: none;
+    z-index: 0;
 }
 .container-burger ul a{
     display: block;
@@ -565,10 +568,13 @@ footer .container-footer{
         align-items: center;
     }
     #burger:checked ~ #burger-logo ul{
-        display: block;
+        transform: translateY(0);
     }
     #burger:checked ~ span{
         border: 2px solid white;
+    }
+    aside{
+        display: none;
     }
 }
 
@@ -629,36 +635,6 @@ footer .container-footer{
         grid-template-columns: 1fr 1fr;
         gap: 30px;
     }
-
-    /* Aside 
-    aside{
-        height: auto;
-        width: 50px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-        gap: 20px;
-        position: fixed;
-        top: auto;
-        bottom: 0;
-        right: 0;
-        overflow: hidden;
-        z-index: 10;
-        background-color: #fff;
-        border: 3px solid rgb(13, 13, 63);
-        padding: 10px;
-        border-radius: 2px;
-        transition: width 800ms;
-        transition-timing-function:cubic-bezier(0.215, 0.610, 0.355, 1);
-    }
-    aside:hover{
-        width: 80%;
-    }
-    aside a{
-        color: rgb(13, 13, 63);
-    }
-    */
 }
 
 /* Lorsque l'écran fait 932px ou moins, ce style est appliqué: */
